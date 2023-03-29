@@ -66,3 +66,13 @@ C:\Users\Practicas.soporte\Desktop\git\WebAPIAutores\WebAPIAutores\bin\Debug\net
 C:\Users\Practicas.soporte\Desktop\git\WebAPIAutores\WebAPIAutores\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\Practicas.soporte\Desktop\git\WebAPIAutores\WebAPIAutores\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\Practicas.soporte\Desktop\git\WebAPIAutores\WebAPIAutores\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\Users\Practicas.soporte\Desktop\git\WebAPIAutores\WebAPIAutores\obj\Debug\net6.0\WebAPIAutores.Properties.Resources.resources
+C:\Users\Practicas.soporte\Desktop\git\WebAPIAutores\WebAPIAutores\obj\Debug\net6.0\WebAPIAutores.csproj.GenerateResource.cache
+C:\Users\Practicas.soporte\Desktop\git\WebAPIAutores\WebAPIAutores\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Practicas.soporte\Desktop\git\WebAPIAutores\WebAPIAutores\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Practicas.soporte\Desktop\git\WebAPIAutores\WebAPIAutores\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Practicas.soporte\Desktop\git\WebAPIAutores\WebAPIAutores\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Practicas.soporte\Desktop\git\WebAPIAutores\WebAPIAutores\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Practicas.soporte\Desktop\git\WebAPIAutores\WebAPIAutores\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Practicas.soporte\Desktop\git\WebAPIAutores\WebAPIAutores\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\Practicas.soporte\Desktop\git\WebAPIAutores\WebAPIAutores\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
