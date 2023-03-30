@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebAPIAutores.DTOs;
@@ -50,8 +52,10 @@ namespace WebAPIAutores.Controllers
         }
         
         [HttpPost]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)] //protegemos endpoints, ademas puede acceder a los claims del usuario
         public async Task<ActionResult> Post(int libroId, ComentarioCreacionDTO comentarioCreacionDTO)
         {
+            var email = HttpContext.User.Claims.Where(claim => claim.Type == "email").FirstOrDefault();
             var existeLibro = await context.Libros.AnyAsync(libroDB => libroDB.Id == libroId);
 
             if (!existeLibro)
