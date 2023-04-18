@@ -10,11 +10,13 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using System.IdentityModel.Tokens.Jwt;
 using System.IO;
 using System.Text;
 using System.Text.Json.Serialization;
 using WebAPIAutores.Filtros;
 using WebAPIAutores.Middlewares;
+using WebAPIAutores.Servicios;
 
 namespace WebAPIAutores
 {
@@ -22,6 +24,7 @@ namespace WebAPIAutores
     {
         public Startup(IConfiguration configuration)
         {
+            JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
             Configuration = configuration;
         }
 
@@ -89,6 +92,23 @@ namespace WebAPIAutores
             services.AddIdentity<IdentityUser, IdentityRole>() //identificacion
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
+
+            services.AddAuthorization(opciones => //autorizacion para admin
+            {
+                opciones.AddPolicy("EsAdmin", politica => politica.RequireClaim("esAdmin"));
+                //opciones.AddPolicy("EsVendedor", politica => politica.RequireClaim("esVendedor"));
+            });
+
+            services.AddDataProtection(); //encriptacion
+            services.AddTransient<HashService>();
+
+            services.AddCors(opciones =>
+            {
+                opciones.AddDefaultPolicy(builder =>
+                {
+                    builder.WithOrigins("https://apirequest.io").AllowAnyMethod().AllowAnyHeader();
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -110,6 +130,8 @@ namespace WebAPIAutores
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors();
 
             app.UseAuthorization();
 

@@ -1,1 +1,6 @@
-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRhbmllbEBkYW5pZWwuY29tIiwiZXhwIjoxNzExNzc5OTM3fQ.EGKX3ndVUeEGUgMpHWw1XUNTplDviXB9MYedISfUuog
+Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBydWViYUBwcnVlYmEuY29tIiwiZXNBZG1pbiI6IjEiLCJleHAiOjE3MTM0MjQ4MzJ9.XD1M2Uevh75zV5Ww8Ph6gcDvuJ3dTEmnovbbf4p28Zw
+
+{	
+  "email": "prueba@prueba.com",
+  "password": "12345aA?"
+}
